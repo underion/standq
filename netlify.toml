@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"  # Comando para construir o seu site, ajuste conforme necessário
+  publish = "dist"  # Diretório a ser publicado após a construção
+
+[[redirects]]  # Configuração de redirecionamentos, se necessário
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]  # Configuração de cabeçalhos, se necessário
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
+      Cache-Control = "public, max-age=0, must-revalidate"
